@@ -1,0 +1,22 @@
+.uv-progress-bar {
+    width: 80%;
+    height: 20px;
+    background-color: #B6ABBD;
+    border-radius: 4px;
+    position: relative;
+    margin-left: 10px;
+  }
+  
+  .uv-progress-fill {
+    height: 100%;
+    background-color: #6F289D; 
+    border-radius: 4px;
+  }
+  
+  .uv-progress-label {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    line-height: 20px;
+    color: #555;
+  }
