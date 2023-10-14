@@ -137,12 +137,12 @@ const DayProgretion = ({ data }) => {
         <div>
           <div
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "rotateY(180deg)"; // Gira al pasar el mouse
-              e.currentTarget.style.backgroundColor = "rgba(0, 0, 0, 0.5)"; // Color de fondo opaco
+              e.currentTarget.style.transform = "rotateY(180deg)"; 
+              e.currentTarget.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "rotateY(0deg)"; // Restablece la rotación
-              e.currentTarget.style.backgroundColor = "transparent"; // Restablece el fondo transparente
+              e.currentTarget.style.transform = "rotateY(0deg)"; 
+              e.currentTarget.style.backgroundColor = "transparent"; 
             }}
             style={{
               height: "15vh",
@@ -152,9 +152,9 @@ const DayProgretion = ({ data }) => {
               backgroundPosition: "center",
               backgroundSize: "contain",
               borderRadius: '50%',
-              border: '15px solid #ccc', // Borde grueso
-              transition: 'transform 5s', // Animación de giro suave en 2 segundos
-              transformStyle: 'preserve-3d', // Permite un giro 3D
+              border: '15px solid #ccc', 
+              transition: 'transform 5s', 
+              transformStyle: 'preserve-3d', 
               cursor: 'pointer',
               
             }}
