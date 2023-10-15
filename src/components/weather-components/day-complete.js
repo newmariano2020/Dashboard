@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs";
+import './day-complete.css';
 
 const DayComplete = ({ data }) => {
   const [hourlyData, setHourlyData] = useState([]);
@@ -70,7 +71,8 @@ const DayComplete = ({ data }) => {
             display: true,
             labelString: "Hora del día",
   
-        },
+        }
+       
       },
       ],
       yAxes: [
@@ -106,6 +108,10 @@ const DayComplete = ({ data }) => {
     },
   };
 
+  const isMobile = window.innerWidth <= 600; // Punto de quiebre en 600px
+
+const chartWidth = isMobile ? 1000 : 1200;
+
   return (
     <div style={{ marginLeft: "4vh" }}>
       <div
@@ -119,11 +125,17 @@ const DayComplete = ({ data }) => {
         }}
         className="day-progretion"
       >
+        <div className="chart-container">
         <Line
           data={chartData}
           options={chartOptions}
-          style={{ marginTop:'5vh',marginLeft: "6vh",height: "13vh", width: "120vh" }}
+          responsive={true}
+          maintainAspectRatio= {false}
+          width={chartWidth} // Ajusta el ancho del gráfico
+          height={170} // Ajusta la altura del gráfico
+          style={{ marginLeft:'5vh', marginTop:'10px' }}
         />
+        </div>
       </div>
     </div>
   );

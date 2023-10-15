@@ -28,6 +28,7 @@ import {
   WiHail,
 } from "react-icons/wi";
 import CircularProgress from "@mui/material/CircularProgress";
+import "./temperature.css";
 
 const codeToIconAndDescriptionMap = {
   0: { icon: <WiDaySunny />, description: "Día soleado" },
@@ -152,28 +153,19 @@ const Temperature = ({ data }) => {
           alignItems: "center",
           justifyContent: "space-between",
           width: "25vh",
+          
         }}
       >
         <div
           className="resumen-temperatura "
-          style={{
-            height: "26vh",
-            width: "20vh",
-            backgroundColor: "#8A71DF",
-            borderRadius: "20px",
-            marginTop: "2vh",
-            display: "flex",
-            flexDirection: "column",
-            textAlign: "center",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+      
         >
-          <div style={{ margin: "10px", fontSize: "70px", color:'yellow' }}  >
+          <div className="icon-style-weather"   >
             {weatherIcon}
+            <span className="resumen-temperatura_description" style={{ color: "white" }}>{weatherCodeDescription}</span>
           </div>
-          <span style={{ color: "white" }}>{weatherCodeDescription}</span>
-          <div style={{ color: "white", fontSize: "20px", marginTop: "15px" }}>
+          
+          <div className="resumen-temperatura_data" >
             Temperatura:{" "}
           </div>
           <div>
@@ -206,34 +198,22 @@ const Temperature = ({ data }) => {
           </div>
         </div>
         <div
-          className="resumen-temperatura_data"
-          style={{
-            height: "20vh",
-            width: "20vh",
-            background: "rgb(0,206,255)",
-            background:
-              "linear-gradient(100deg, rgba(0,206,255,1) 0%, rgba(255,72,0,1) 100%)",
-            borderRadius: "20px",
-            marginBottom: "2vh",
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+          className="resumen-temperatura-max-min"
+          
         >
-          <div className="min-temp" style={{ marginRight: "5px" }}>
+          <div className="min-temp" >
             <span style={{ color: "white" }}>Min: </span>
             <span style={{ color: "white" }}>
               {minTemp ? minTemp : <CircularProgress color="inherit" />}°C
             </span>
           </div>
           <div
-            style={{ width: "1px", height: "8vh", backgroundColor: "#ffffff" }}
+            style={{ margin: '0,5px', width: "1px", height: "8vh", backgroundColor: "#ffffff" }}
             className="divider-temp"
           >
             {" "}
           </div>
-          <div className="max-temp" style={{ marginLeft: "5px" }}>
+          <div className="max-temp" >
             <span style={{ color: "white" }}>Max: </span>
             <span style={{ color: "white" }}>
               {maxTemp ? maxTemp : <CircularProgress color="inherit" />} °C

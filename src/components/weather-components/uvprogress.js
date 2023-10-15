@@ -37,15 +37,16 @@ const UvProgressBar = ({ uvIndex }) => {
       <div
         className="uv-progress-fill"
         style={{
+          
           width: `${uvIndexPercentage}%`,
-          backgroundColor: color ? color : "#6F289D",
+          backgroundColor: color ? color : "#6F289D"
         }}
       ></div>
       <div className="uv-progress-label">
         {uvIndex ? uvIndex : <LinearProgress color="secondary" />}
-      </div>
+       </div>
       <div style={{ textAlign: "center", marginTop: "10px" }}>
-        <span style={{ color: color, fontSize: "15px" }}>{leyenda}</span>
+        <span className="uv-progress-text" style={{ color: color}}>{leyenda}</span>
       </div>
     </div>
   );

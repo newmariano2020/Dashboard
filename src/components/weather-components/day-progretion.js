@@ -12,6 +12,7 @@ import UvProgress from "./uvprogress";
 import HumidityBar from "./humedity";
 import CircularProgress from "@mui/material/CircularProgress";
 import Precipitation from "./precipitation";
+import "./day-progretion.css";
 
 let datas = {
   visibility: 6.1,
@@ -129,20 +130,20 @@ const DayProgretion = ({ data }) => {
         }}
         className="day-progretion"
       >
-        <div style={{ textAlign: "center", height: "8vh" , width: "40%"}}>
-          <span style={{ color: "white", fontSize: "20px" }}>
+        <div style={{ textAlign: "center", height: "8vh", width: "40%" }}>
+          <span className="day-text">
             El clima de tu ciudad, llevalo contigo.
           </span>
         </div>
         <div>
           <div
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "rotateY(180deg)"; 
+              e.currentTarget.style.transform = "rotateY(180deg)";
               e.currentTarget.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "rotateY(0deg)"; 
-              e.currentTarget.style.backgroundColor = "transparent"; 
+              e.currentTarget.style.transform = "rotateY(0deg)";
+              e.currentTarget.style.backgroundColor = "transparent";
             }}
             style={{
               height: "15vh",
@@ -151,17 +152,26 @@ const DayProgretion = ({ data }) => {
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
               backgroundSize: "contain",
-              borderRadius: '50%',
-              border: '15px solid #ccc', 
-              transition: 'transform 5s', 
-              transformStyle: 'preserve-3d', 
-              cursor: 'pointer',
-              
+              borderRadius: "50%",
+              border: "15px solid #ccc",
+              transition: "transform 5s",
+              transformStyle: "preserve-3d",
+              cursor: "pointer",
             }}
           ></div>
         </div>
       </div>
-      <h2 style={{ color: "white", fontSize: "20px" }}>Highlights</h2>
+      <h2
+        style={{
+          color: "white",
+          fontSize: "20px",
+          textAlign: "center",
+          animation: "glow 2s infinite",
+          textShadow: "0 0 5px #000000, 0 0 10px #434037",
+        }}
+      >
+        Estadísticas
+      </h2>
       <div
         style={{
           display: "flex",
@@ -173,38 +183,37 @@ const DayProgretion = ({ data }) => {
         className="cards-box-container"
       >
         <div
+        className="card-box"
           style={{
             backgroundColor: "#ffffff",
             width: "14.5vh",
-            height: "14vh",
+           
             borderRadius: "20px",
           }}
         >
-          <div style={{ margin: "2vh" }}>
-            <span style={{ fontWeight: "bold", color: "#542472" }}>
-              Indice de UV
-            </span>
+          <div className="statistics-title">
+            <span>Indice de UV</span>
           </div>
           <UvProgress uvIndex={uvStatus} />
         </div>
         <div
+        className="card-box"
           style={{
             backgroundColor: "#ffffff",
             width: "14.5vh",
-            height: "14vh",
+           
             borderRadius: "20px",
           }}
         >
-          <div style={{ margin: "2vh", textAlign: "center" }}>
+          <div className="statistics-title" style={{ textAlign: "center" }}>
             <span style={{ fontWeight: "bold", color: "#542472" }}>
               Velocidad del viento{" "}
             </span>
           </div>
           <div style={{ marginLeft: "3vh" }}>
             <span
+              className="statistics-wind-text"
               style={{
-                fontSize: "15px",
-                fontWeight: "bold",
                 color: windColor ? windColor : "#542472",
               }}
             >
@@ -213,29 +222,28 @@ const DayProgretion = ({ data }) => {
             </span>
           </div>
           <div
+            className="wind-box-container"
             style={{
               textAlign: "center",
-              marginTop: "10px",
               fontWeight: "bold",
               color: windColor ? windColor : "#542472",
             }}
           >
             {" "}
-            <span>{windClasificacion}</span>
+            <span className="statistics-wind-text">{windClasificacion}</span>
           </div>
         </div>
         <div
+        className="card-box"
           style={{
             backgroundColor: "#ffffff",
             width: "14.5vh",
-            height: "14vh",
+           
             borderRadius: "20px",
           }}
         >
-          <div style={{ padding: "10px", textAlign: "center" }}>
-            <span style={{ fontSize: "15px", color: "#542472" }}>
-              Salida y Puesta del Sol
-            </span>
+          <div className="statistics-title" style={{ textAlign: "center" }}>
+            <span>Salida y Puesta del Sol</span>
           </div>
           <div
             style={{
@@ -245,8 +253,8 @@ const DayProgretion = ({ data }) => {
               justifyContent: "center",
             }}
           >
-            <WiHorizonAlt size={30} color="#E7DD13 " />
-            <span style={{ color: "#B4880A" }}>
+            <WiHorizonAlt size={29} color="#E7DD13 " />
+            <span className="sun-text-hour" style={{ color: "#B4880A" }}>
               {sunriseFix ? sunriseFix : <CircularProgress color="secondary" />}
               AM
             </span>
@@ -260,38 +268,31 @@ const DayProgretion = ({ data }) => {
             }}
           >
             <WiHorizon size={30} color="#A9A20B " />
-            <span style={{ color: "#B4880A" }}>
+            <span className="sun-text-hour" style={{ color: "#B4880A" }}>
               {sunsetFix ? sunsetFix : <CircularProgress color="secondary" />}PM
             </span>
           </div>
         </div>
         <div
+        className="card-box"
           style={{
             backgroundColor: "#ffffff",
             width: "14.5vh",
-            height: "14vh",
+           
             borderRadius: "20px",
           }}
         >
-          <div style={{ marginTop: "5px" }}>
-            <span
-              style={{
-                color: "#13769B",
-                fontSize: "15px",
-                marginLeft: "3.5vh",
-                fontWeight: "500",
-              }}
-            >
-              Humedad
-            </span>
+          <div className="statistics-title">
+            <span>Humedad</span>
           </div>
           <HumidityBar humedity={humedity} />
         </div>
         <div
+        className="card-box"
           style={{
             backgroundColor: "#ffffff",
             width: "14.5vh",
-            height: "14vh",
+           
             borderRadius: "20px",
             display: "flex",
             flexDirection: "column",
@@ -299,14 +300,9 @@ const DayProgretion = ({ data }) => {
             justifyContent: "center",
           }}
         >
-          <div style={{ marginBottom: "5px", textAlign: "center" }}>
+          <div  className="statistics-title" >
             <span
-              style={{
-                color: "#13769B",
-                fontSize: "13px",
-
-                fontWeight: "500",
-              }}
+             
             >
               Probabilidad de lluvias:{" "}
             </span>
@@ -315,10 +311,11 @@ const DayProgretion = ({ data }) => {
           <Precipitation precipitation={precipitation} />
         </div>
         <div
+        className="card-box"
           style={{
             backgroundColor: "#ffffff",
             width: "14.5vh",
-            height: "14vh",
+           
             borderRadius: "20px",
             textAlign: "center",
             display: "flex",
@@ -327,11 +324,11 @@ const DayProgretion = ({ data }) => {
             justifyContent: "center",
           }}
         >
-          <span style={{ fontWeight: "bold", color: "#13769B" }}>
+          <span className="statistics-title" >
             Bienvenido!
           </span>
           <div>
-            <WiBarometer size={80} color="#41922B " />
+            <WiBarometer size={60} color="#41922B " />
           </div>
         </div>
       </div>

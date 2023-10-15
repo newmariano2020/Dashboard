@@ -1,0 +1,88 @@
+@media screen and (max-width: 600px) {
+    .day-progretion {
+        background-color: #8A71DF;
+        height: 12vh;
+        width: 48vh;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 6vh;
+        align-items: center;
+    }
+
+    .day-text {
+        color: #fff;
+        font-size: 15px;
+    }
+
+    .statistics-title {
+        font-weight: bold;
+        color: #542472;
+        font-size: 12px;
+        margin: 1vh;
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    .statistics-wind-text {
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .wind-box-container{
+        
+        margin-top: none;
+      
+    }
+    .sun-text-hour{
+        font-size: 12px;
+    }
+    .card-box{
+        background-color: #fff;
+        height: 14vh;
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+    .day-progretion {
+        background-color: #8A71DF;
+        height: 12vh;
+        width: 48vh;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 6vh;
+        align-items: center;
+    }
+
+    .day-text {
+        color: #fff;
+        font-size: 15px;
+    }
+
+    .statistics-title {
+        font-weight: bold;
+        color: #542472;
+        font-size: 16px;
+        margin: 1vh;
+        text-align: center;
+    }
+
+    .statistics-wind-text {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .wind-box-container{
+        
+        margin-top: 10px;
+       
+    }
+    .card-box{
+        background-color: #fff;
+        height: 16vh;
+
+    }
+   
+}

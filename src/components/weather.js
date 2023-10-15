@@ -3,6 +3,7 @@ import Temperature from "./weather-components/temperature";
 import DayProgretion from "./weather-components/day-progretion";
 import DayComplete from "./weather-components/day-complete";
 
+
 const Weather = ( {data} ) => {
   const  weatherData = data;
   return (

@@ -1,0 +1,109 @@
+@media screen and (max-width: 600px) {
+
+    .icon-style-weather{
+        font-size: 35px ;
+        color: yellow;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2vh;
+    }
+    .resumen-temperatura_data{
+        font-size: 16px;
+        color: #fff;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    .resumen-temperatura_description{
+        font-size: 16px;
+        color: #fff;
+    }
+    .resumen-temperatura{
+        height: 30vh;
+        width: 26vh;
+        background-color: #8A71DF;
+        border-radius: 20px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .resumen-temperatura-max-min{
+        height: 20vh;
+        width: 25vh;
+        background: rgb(0,206,255);
+        background:
+          linear-gradient(100deg, rgba(0,206,255,1) 0%, rgba(255,72,0,1) 100%);
+        border-radius:20px;
+        margin-bottom: 4vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding:5px
+;    }
+    .min-temp, .max-temp{
+     font-size: 12px;
+    
+    }
+  
+}
+@media screen and (min-width: 600px) {
+ 
+
+    .resumen-temperatura{
+        height: 26vh;
+        width: 20vh;
+        background-color: #8A71DF;
+        border-radius: 20px;
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .icon-style-weather{
+       margin: 10px;
+        font-size: 60px ;
+        color:yellow;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2vh;
+    }
+    .resumen-temperatura_data{
+        color: #fff;
+        font-size: 20px;
+      
+    }
+    .resumen-temperatura-max-min{
+        height: 20vh;
+        width: 20vh;
+        background: rgb(0,206,255);
+        background:
+          linear-gradient(100deg, rgba(0,206,255,1) 0%, rgba(255,72,0,1) 100%);
+        border-radius:20px;
+        margin-bottom: 2vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .min-temp{
+        margin-right: 5px
+    }
+    .max-temp{
+        margin-left: 5px
+    }
+
+    .resumen-temperatura_description{
+        font-size: 18px;
+        color: #fff;
+    }
+}

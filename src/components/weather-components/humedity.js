@@ -14,7 +14,7 @@ const HumidityBar = ({ humedity }) => {
           height: humedity ? humedity : <LinearProgress color="secondary" />,
         }}
       >
-        <span className="humidity-label" style={{ color: "#040B59" }}>
+        <span className="humidity-label" style={{ color: "#fff" }}>
           {humedity}%
         </span>
       </div>

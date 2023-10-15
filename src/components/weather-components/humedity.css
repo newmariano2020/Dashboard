@@ -1,21 +1,23 @@
-.humidity-bar {
-    width: 40px; 
-    height: 60%; 
+@media screen and (max-width: 600px) {
+  .humidity-bar {
+    height: 54%;
+    width: 40px;
+
     background-color: #7CEFC4;
     border-radius: 4px;
     position: relative;
     display: inline-block;
   }
-  
+
   .humidity-fill {
     width: 100%;
-    background-color: #3498db; 
+    background-color: #3498db;
     border-radius: 4px;
     position: absolute;
     bottom: 0;
     transition: height 0.5s ease-in-out;
   }
-  
+
   .humidity-label {
     position: absolute;
     bottom: 5px;
@@ -23,3 +25,33 @@
     transform: translateX(-50%);
     color: #555;
   }
+}
+
+@media screen and (min-width: 600px) {
+  .humidity-bar {
+    height: 60%;
+    width: 40px;
+
+    background-color: #7CEFC4;
+    border-radius: 4px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .humidity-fill {
+    width: 100%;
+    background-color: #3498db;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 0;
+    transition: height 0.5s ease-in-out;
+  }
+
+  .humidity-label {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+  }
+}

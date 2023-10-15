@@ -1,6 +1,7 @@
-.precipitation-bar {
+@media screen and (max-width: 600px) {
+  .precipitation-bar {
     width: 40px; 
-    height: 60%; 
+    height: 54%; 
     background-color: #7CEFC4;
     border-radius: 4px;
     position: relative;
@@ -23,3 +24,37 @@
     transform: translateX(-50%);
     color: #555;
   }
+}
+
+@media screen and (min-width: 600px) {
+  .precipitation-bar {
+    width: 40px; 
+    height: 60%; 
+    background-color: #7CEFC4;
+    border-radius: 4px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  
+  .precipitation-fill {
+    width: 100%;
+    background-color: #3498db; 
+    border-radius: 4px;
+    position: absolute;
+    bottom: 0;
+    transition: height 0.5s ease-in-out;
+  }
+  
+  .precipitation-label {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+  }
+}
+
+
+
+

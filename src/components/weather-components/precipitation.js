@@ -1,9 +1,9 @@
 import React from "react";
 import "./precipitation.css";
-import LinearProgress from "@mui/material/LinearProgress";
+
 
 const Precipitation = ({ precipitation }) => {
-   const numberData = 8
+   
   return (
     <div
       className="precipitation-bar"
