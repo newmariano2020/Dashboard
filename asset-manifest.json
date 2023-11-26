@@ -1,16 +1,24 @@
 {
   "files": {
-    "main.css": "/Dashboard/static/css/main.05c008c7.css",
-    "main.js": "/Dashboard/static/js/main.afa65681.js",
+    "main.css": "/Dashboard/static/css/main.e91c2196.css",
+    "main.js": "/Dashboard/static/js/main.7b1d59dc.js",
     "static/js/787.545aecf5.chunk.js": "/Dashboard/static/js/787.545aecf5.chunk.js",
+    "static/media/humidity.jpeg": "/Dashboard/static/media/humidity.0c5e4260b6c7df8a62f9.jpeg",
+    "static/media/barometer.jpeg": "/Dashboard/static/media/barometer.ec29fb7ae1ab27953aba.jpeg",
+    "static/media/uv-sun.jpeg": "/Dashboard/static/media/uv-sun.bee9436b2d471fcb3867.jpeg",
+    "static/media/raining-chance.jpeg": "/Dashboard/static/media/raining-chance.3ebfddcaf207406a4d29.jpeg",
     "static/media/clima-icon.jpeg": "/Dashboard/static/media/clima-icon.a22deba2862076b15066.jpeg",
+    "static/media/wind-speed.jpeg": "/Dashboard/static/media/wind-speed.f5be11d328f5feefdb25.jpeg",
+    "static/media/sunrise.jpeg": "/Dashboard/static/media/sunrise.0efc2db589be5108a35c.jpeg",
+    "static/media/rainning.webp": "/Dashboard/static/media/rainning.a92e205dfa530406333a.webp",
+    "static/media/weather-vane.jpeg": "/Dashboard/static/media/weather-vane.e4bcc1f3f8e6f60eff04.jpeg",
     "index.html": "/Dashboard/index.html",
-    "main.05c008c7.css.map": "/Dashboard/static/css/main.05c008c7.css.map",
-    "main.afa65681.js.map": "/Dashboard/static/js/main.afa65681.js.map",
+    "main.e91c2196.css.map": "/Dashboard/static/css/main.e91c2196.css.map",
+    "main.7b1d59dc.js.map": "/Dashboard/static/js/main.7b1d59dc.js.map",
     "787.545aecf5.chunk.js.map": "/Dashboard/static/js/787.545aecf5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.05c008c7.css",
-    "static/js/main.afa65681.js"
+    "static/css/main.e91c2196.css",
+    "static/js/main.7b1d59dc.js"
   ]
 }
