@@ -1,27 +1,32 @@
-@media screen and (max-width: 600px) {
-    .day-progretion {
-        background-color: #8A71DF;
-        height: 12vh;
-        width: 48vh;
+@media screen and (max-width: 700px) {
 
+    .day-progretion-container {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 6vh;
-        align-items: center;
+        flex-direction: column;
+        width: 95%;
+        margin-left: 1.5%;
     }
 
-    .day-text {
-        color: #fff;
-        font-size: 15px;
+    .day-progretioncard-box {
+        background-color: #8A71DF;
+        margin-top: 4px;
+        display: flex;
+        flex-direction: row;
+        gap: 6vh;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 48vh;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
 
     .statistics-title {
         font-weight: bold;
-        color: #542472;
-        font-size: 12px;
-        margin: 1vh;
-        margin-top: 5px;
+        color: #333333;
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 10px;
+        margin-bottom: 20px;
         text-align: center;
     }
 
@@ -29,60 +34,242 @@
         font-size: 12px;
         font-weight: bold;
     }
-    .wind-box-container{
-        
-        margin-top: none;
-      
-    }
-    .sun-text-hour{
+
+    .statistic-title-wind {
+        margin-top: 15px;
+        color: #333333;
+        font-weight: 700;
         font-size: 12px;
     }
-    .card-box{
-        background-color: #fff;
-        height: 14vh;
+
+    .wind-box-container {
+
+        margin-top: none;
+
     }
+
+    .sun-text-hour {
+        font-size: 12px;
+    }
+
+    .card-box {
+        background-color: #fff;
+        height: 20vh;
+        width: 45%;
+        border-radius: 15px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around
+    }
+
+    .card-box-welcome {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .statistic-welcome-text{
+        margin-bottom: 5px;
+    }
+
+    .info-title {
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        animation: glow 2s infinite;
+        text-shadow: 0 0 5px #000000, 0 0 10px #434037;
+    }
+
+    .cards-box-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 2vh;
+        margin-bottom: 30px;
+        justify-content: center;
+       
+    }
+
+    .card-box-width-down {
+        background-color: #fff;
+        height: 20vh;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 15px;
+        text-align: center;
+    }
+    .humedity-title{
+        font-size: 12px;
+        color: #333333;
+        font-weight: 800;
+        text-align: center;
+        animation: glow 2s infinite;
+        margin-top: 10px;
+        
+    }
+    .box-day-rise{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+     
+    }
+    .progretion-images{
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+        background-size: cover;
+    }
+    .sunrise-sunset-control{
+        display: flex;
+        flex-direction: column;
+    }
+
 }
 
 
-@media screen and (min-width: 600px) {
-    .day-progretion {
-        background-color: #8A71DF;
-        height: 12vh;
-        width: 48vh;
-
+@media screen and (min-width: 700px) {
+    
+    .day-progretion-container {
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 6vh;
-        align-items: center;
+        flex-direction: column;
+        width: 95%;
+        margin-left: 1.5%;
     }
 
-    .day-text {
-        color: #fff;
-        font-size: 15px;
+    .day-progretioncard-box {
+        background-color: #8A71DF;
+        margin-top: 4px;
+        display: flex;
+        flex-direction: row;
+        gap: 6vh;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 48vh;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
 
     .statistics-title {
         font-weight: bold;
-        color: #542472;
-        font-size: 16px;
-        margin: 1vh;
+        color: #333333;
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 10px;
+        margin-bottom: 20px;
         text-align: center;
     }
 
     .statistics-wind-text {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: bold;
     }
-    .wind-box-container{
+
+    .statistic-title-wind {
+     
+        color: #333333;
+        font-weight: 700;
         
-        margin-top: 10px;
-       
     }
-    .card-box{
-        background-color: #fff;
-        height: 16vh;
+
+    .wind-box-container {
+
+        margin-top: none;
 
     }
-   
+
+    .sun-text-hour {
+        font-size: 20px;
+    }
+
+    .card-box {
+        background-color: #fff;
+        height: 30vh;
+        width: 20%;
+        border-radius: 15px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .card-box-welcome {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+       
+      
+    }
+    .statistic-welcome-text{
+        margin-bottom: 5px;
+       
+    }
+
+    .info-title {
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        animation: glow 2s infinite;
+        text-shadow: 0 0 5px #000000, 0 0 10px #434037;
+    }
+
+    .cards-box-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 2vh;
+        margin-bottom: 30px;
+        justify-content: center;
+       
+    }
+
+    .card-box-width-down {
+        background-color: #fff;
+        height: 30vh;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 15px;
+        text-align: center;
+      
+    }
+    .humedity-title{
+        font-size: 15px;
+        color: #333333;
+        font-weight: 800;
+        text-align: center;
+        animation: glow 2s infinite;
+        margin-top: 10px;
+        
+    }
+    .box-day-rise{
+        display:flex;
+        flex-direction:column;
+    align-items: center;
+ 
+    }
+    .progretion-images{
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background-size: cover;
+        margin-bottom: 20px;
+    }
+   .sunrise-sunset-control{
+    display: flex;
+    flex-direction: row;
+   }
+
 }

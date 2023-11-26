@@ -1,7 +1,113 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 
-    .icon-style-weather{
-        font-size: 35px ;
+    .icon-style-weather {
+        font-size: 45px;
+        color: yellow;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1vh;
+    }
+
+    .resumen-temperatura_data {
+        font-size: 14px;
+        color: #fff;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    .box-temperature_data {
+
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        align-items: center;
+        width: 100%;
+    }
+
+    .resumen-temperatura_description {
+        font-size: 14px;
+        color: #fff;
+    }
+
+    .resumen-temperatura {
+        height: 20vh;
+        width: 35vh;
+        background-color: #8A71DF;
+        border-radius: 20px;
+        margin: 15px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .resumen-temperatura-max-min {
+        height: 12vh;
+        width: 35vh;
+        background: rgb(0, 206, 255);
+        background:
+            linear-gradient(100deg, rgba(0, 206, 255, 1) 0%, rgba(255, 72, 0, 1) 100%);
+        border-radius: 20px;
+        margin: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .min-temp, .max-temp {
+        font-size: 12px;
+
+    }
+
+    .temperature-box-termic-wraper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .temperature-data {
+        color: #fff;
+        font-size: 15px;
+        color: #FEF647;
+        font-weight: bold;
+    }
+
+    .resumen-temperatura_description {
+        text-align: center;
+        margin: 15px;
+    }
+
+    .weekly-weather {
+
+        width: 25%;
+        color: #fff;
+        text-align: center;
+    }
+
+    .daily-weather-box {
+        padding: 20px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+
+
+    .icon-style-weather {
+        font-size: 45px;
         color: yellow;
         display: flex;
         flex-direction: column;
@@ -9,101 +115,90 @@
         align-items: center;
         margin-bottom: 2vh;
     }
-    .resumen-temperatura_data{
-        font-size: 16px;
+
+    .resumen-temperatura_data {
+        font-size: 24px;
         color: #fff;
         margin-top: 2px;
         margin-bottom: 2px;
     }
 
-    .resumen-temperatura_description{
-        font-size: 16px;
-        color: #fff;
-    }
-    .resumen-temperatura{
-        height: 30vh;
-        width: 26vh;
-        background-color: #8A71DF;
-        border-radius: 20px;
-        
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-    }
-    .resumen-temperatura-max-min{
-        height: 20vh;
-        width: 25vh;
-        background: rgb(0,206,255);
-        background:
-          linear-gradient(100deg, rgba(0,206,255,1) 0%, rgba(255,72,0,1) 100%);
-        border-radius:20px;
-        margin-bottom: 4vh;
+    .box-temperature_data {
+
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding:5px
-;    }
-    .min-temp, .max-temp{
-     font-size: 12px;
-    
+        height: 100%;
+        justify-content: space-evenly;
+        width: 100%;
+        flex-wrap: wrap;
     }
-  
-}
-@media screen and (min-width: 600px) {
- 
 
-    .resumen-temperatura{
-        height: 26vh;
-        width: 20vh;
+    .resumen-temperatura_description {
+        font-size: 24px;
+        color: #fff;
+    }
+
+    .resumen-temperatura {
+        height: 20vh;
+        width: 34%;
         background-color: #8A71DF;
         border-radius: 20px;
-       
+
         display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
         align-items: center;
+        padding: 5px;
     }
-    .icon-style-weather{
-       margin: 10px;
-        font-size: 60px ;
-        color:yellow;
+
+    .resumen-temperatura-max-min {
+        height: 20vh;
+        width: 34%;
+        background: rgb(0, 206, 255);
+        background:
+            linear-gradient(100deg, rgba(0, 206, 255, 1) 0%, rgba(255, 72, 0, 1) 100%);
+        border-radius: 20px;
+
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-evenly;
         align-items: center;
-        margin-bottom: 2vh;
+        padding: 5px;
     }
-    .resumen-temperatura_data{
+
+    .min-temp, .max-temp {
+        font-size: 24px;
+
+
+    }
+
+    .temperature-box-termic-wraper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .temperature-data {
         color: #fff;
         font-size: 20px;
-      
-    }
-    .resumen-temperatura-max-min{
-        height: 20vh;
-        width: 20vh;
-        background: rgb(0,206,255);
-        background:
-          linear-gradient(100deg, rgba(0,206,255,1) 0%, rgba(255,72,0,1) 100%);
-        border-radius:20px;
-        margin-bottom: 2vh;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    .min-temp{
-        margin-right: 5px
-    }
-    .max-temp{
-        margin-left: 5px
+        color: #FEF647;
+        font-weight: bold;
     }
 
-    .resumen-temperatura_description{
-        font-size: 18px;
+    .daily-weather-box {
+        padding: 20px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .weekly-weather {
+        margin-top: 30px;
+        width: 25%;
         color: #fff;
+        text-align: center;
     }
 }

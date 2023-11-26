@@ -1,0 +1,40 @@
+.transport-container {
+    padding: 50px;
+    height: 100vh;
+    background-color: black
+}
+
+.transport-box {
+    background-color: #9CC4E5;
+    height: 90vh;
+    width: 85vh;
+    margin-top: 3.2vh;
+    border-radius: 20px;
+
+}
+
+.menu-transport {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2vh;
+    gap: 1vh
+}
+
+.button-transport {
+    width: 60px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #8A71DF;
+}
+
+.input-transport {
+    width: 5vh;
+    height: 40px;
+}
+
+.searcher-map-box{
+    margin-top: 50px;
+    margin-left: 30%;
+}

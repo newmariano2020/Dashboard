@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Line } from "react-chartjs";
-import './day-complete.css';
+import "./day-complete.css";
 
 const DayComplete = ({ data }) => {
   const [hourlyData, setHourlyData] = useState([]);
@@ -8,9 +8,9 @@ const DayComplete = ({ data }) => {
   useEffect(() => {
     const fetchData = async () => {
       if (data && data.current) {
-        setHourlyData(data.hourly.temperature_2m);
+        const temp = data.hourly.temperature_2m.slice(0, 24);
+        setHourlyData(temp);
       }
-     
     };
 
     fetchData();
@@ -42,7 +42,6 @@ const DayComplete = ({ data }) => {
       "21:00",
       "22:00",
       "23:00",
-      "24:00",
     ],
     datasets: [
       {
@@ -70,10 +69,8 @@ const DayComplete = ({ data }) => {
           scaleLabel: {
             display: true,
             labelString: "Hora del día",
-  
-        }
-       
-      },
+          },
+        },
       ],
       yAxes: [
         {
@@ -108,33 +105,47 @@ const DayComplete = ({ data }) => {
     },
   };
 
-  const isMobile = window.innerWidth <= 600; // Punto de quiebre en 600px
+  console.log(hourlyData);
 
-const chartWidth = isMobile ? 1000 : 1200;
+  const numberWidth = window.innerWidth;
+
+  const isMobile = window.innerWidth <= 700;
 
   return (
-    <div style={{ marginLeft: "4vh" }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        marginLeft: "10px",
+        marginRight: "10px",
+      }}
+    >
       <div
         style={{
           background: "rgb(255,136,0)",
           background:
             "linear-gradient(180deg, rgba(255,136,0,1) 0%, rgba(249,255,0,0.6530987394957983) 100%)",
           height: "18vh",
-          width: "76vh",
+
           borderRadius: "20px",
         }}
         className="day-progretion"
       >
+        <div className="day-complette-title-container">
+          <span className="day-complette-title">
+            Temperatura Durante el día
+          </span>
+        </div>
         <div className="chart-container">
-        <Line
-          data={chartData}
-          options={chartOptions}
-          responsive={true}
-          maintainAspectRatio= {false}
-          width={chartWidth} // Ajusta el ancho del gráfico
-          height={170} // Ajusta la altura del gráfico
-          style={{ marginLeft:'5vh', marginTop:'10px' }}
-        />
+          <Line
+            className="chart"
+            data={chartData}
+            options={chartOptions}
+            responsive={true}
+            maintainAspectRatio={false}
+            width={numberWidth}
+            height={isMobile ? 500 : 600}
+          />
         </div>
       </div>
     </div>

@@ -4,21 +4,16 @@ import LinearProgress from "@mui/material/LinearProgress";
 
 const HumidityBar = ({ humedity }) => {
   return (
+    <div className="horizontal-bar-container">
     <div
-      className="humidity-bar"
-      style={{ margin: "15px", marginLeft: "5vh", marginTop: "15px" }}
+      className="horizontal-bar-fill"
+      style={{
+        width: `${humedity}%`
+      }}
     >
-      <div
-        className="humidity-fill"
-        style={{
-          height: humedity ? humedity : <LinearProgress color="secondary" />,
-        }}
-      >
-        <span className="humidity-label" style={{ color: "#fff" }}>
-          {humedity}%
-        </span>
-      </div>
+      <span className="horizontal-bar-label">{humedity}%</span>
     </div>
+  </div>
   );
 };
 

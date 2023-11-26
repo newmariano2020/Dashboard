@@ -3,24 +3,18 @@ import "./precipitation.css";
 
 
 const Precipitation = ({ precipitation }) => {
-   
+
   return (
+    <div className="horizontal-bar-container">
     <div
-      className="precipitation-bar"
-      
+      className="horizontal-bar-fill"
+      style={{
+        width: `${precipitation}%`
+      }}
     >
-      <div
-        className="precipitation-fill"
-        style={{
-            height: precipitation === 0 ? 0 : `${precipitation}%`,
-          
-        }}
-      >
-        <span className="precipitation-label" style={{ color: "#040B59" }}>
-          {precipitation}%
-        </span>
-      </div>
+      <span className="horizontal-bar-label">{precipitation}%</span>
     </div>
+  </div>
   );
 };
 

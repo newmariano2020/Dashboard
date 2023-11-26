@@ -1,35 +1,7 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .precipitation-bar {
-    width: 40px; 
-    height: 54%; 
-    background-color: #7CEFC4;
-    border-radius: 4px;
-    position: relative;
-    display: inline-block;
-  }
-  
-  .precipitation-fill {
-    width: 100%;
-    background-color: #3498db; 
-    border-radius: 4px;
-    position: absolute;
-    bottom: 0;
-    transition: height 0.5s ease-in-out;
-  }
-  
-  .precipitation-label {
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #555;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .precipitation-bar {
-    width: 40px; 
-    height: 60%; 
+    height: 40px; 
+    width: 100%; /* Cambié el ancho por 100% para ocupar todo el ancho */
     background-color: #7CEFC4;
     border-radius: 4px;
     position: relative;
@@ -38,12 +10,12 @@
   }
   
   .precipitation-fill {
-    width: 100%;
+    width: 54%; /* Cambié height por width */
     background-color: #3498db; 
     border-radius: 4px;
     position: absolute;
     bottom: 0;
-    transition: height 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
   }
   
   .precipitation-label {
@@ -56,5 +28,28 @@
 }
 
 
+@media screen and (min-width: 700px) {
+  .horizontal-bar-container {
+    height: 40px;
+    background-color: #7CEFC4;
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+  
+  .horizontal-bar-fill {
+    height: 100%;
+    background-color: #3498db;
+    border-radius: 4px;
+    transition: width 0.5s ease-in-out;
+  }
+  
+  .horizontal-bar-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #555;
+  }
 
+}
 

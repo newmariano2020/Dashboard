@@ -79,26 +79,34 @@ const codeToIconAndDescriptionMap = {
 
 function getWeatherIconAndDescription(code) {
   const weatherInfo = codeToIconAndDescriptionMap[code];
-  console.log('im call');
+
   if (weatherInfo) {
     const { icon, description } = weatherInfo;
-    console.log(icon, description);
+
     return { icon, description };
   } else {
     return { icon: null, description: "Código de pronóstico desconocido" };
   }
 }
 
-
 const Temperature = ({ data }) => {
   const [temperature, setTemperature] = useState(null);
-  const [timeData, setTimeData] = useState(null);
+  const [aparentTemp, setAparentTemp] = useState();
   const [minTemp, setMinTemp] = useState(null);
   const [maxTemp, setMaxTemp] = useState(null);
   const [weatherIcon, setWeatherIcon] = useState(null);
   const [weatherCodeDescription, setWeatherCodeDescription] = useState(null);
+  const [dailyData, setDailyData] = useState(null);
+  const [weekDayCode, setWeekDayCode] = useState(null);
+  const [daysWeek, setDaysWeek] = useState(null);
 
+  const [timeData, setTimeData] = useState(null);
   const handlerTime = (time) => {
+    let timefix = time.slice(0, 10) + " " + time.slice(11);
+    setTimeData(timefix);
+  };
+
+  const handlerTimeWeek = (time) => {
     let timefix = time.slice(0, 10) + " " + time.slice(11);
     setTimeData(timefix);
   };
@@ -132,94 +140,129 @@ const Temperature = ({ data }) => {
           data.daily.temperature_2m_min,
           data.daily.temperature_2m_max
         );
-        const { icon, description } = getWeatherIconAndDescription(data.current.weathercode) 
-        setWeatherIcon(icon)
-        setWeatherCodeDescription(description)
-        
+        const { icon, description } = getWeatherIconAndDescription(
+          data.current.weathercode
+        );
+        setWeatherIcon(icon);
+        setWeatherCodeDescription(description);
+        setAparentTemp(data.current.apparent_temperature);
+        setDailyData(
+          data.daily.weather_code.map((code) =>
+            getWeatherIconAndDescription(code)
+          )
+        );
+        setWeekDayCode(data.daily.time);
+      }
     };
-  }
     fetchData();
   }, [data]);
 
+  const weekHandler = (weekdata) => {
+    const weekDays = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
+    setDaysWeek(
+      weekdata.map((date) => {
+        const dateObj = new Date(date);
+        const dayIndex = (dateObj.getDay() + 1) % 7; 
+        const dayweek = weekDays[dayIndex];
+        return dayweek;
+      })
+    );
+  };
+
+  useEffect(() => {
+    if (weekDayCode) {
+      weekHandler(weekDayCode);
+    }
+  }, [ weekDayCode]);
+
+  
   return (
-    <div style={{ height: "100%" }}>
-      <div
-        className="box-temperature_data"
-        style={{
-          gap: "2vh",
-          display: "flex",
-          flexDirection: "column",
-          height: "100%",
-          alignItems: "center",
-          justifyContent: "space-between",
-          width: "25vh",
-          
-        }}
-      >
-        <div
-          className="resumen-temperatura "
-      
-        >
-          <div className="icon-style-weather"   >
-            {weatherIcon}
-            <span className="resumen-temperatura_description" style={{ color: "white" }}>{weatherCodeDescription}</span>
-          </div>
-          
-          <div className="resumen-temperatura_data" >
-            Temperatura:{" "}
+    <div className="box-temperature_data">
+      <div className="resumen-temperatura ">
+        <span style={{ color: "#ffffff" }}>Ahora</span>
+        <div className="icon-style-weather">
+          {weatherIcon}
+          <span
+            className="resumen-temperatura_description"
+            style={{ color: "white" }}
+          >
+            {weatherCodeDescription}
+          </span>
+        </div>
+        <div className="temperature-box-termic-wraper">
+          <div>
+            <div className="resumen-temperatura_data">Temperatura: </div>
+            <div>
+              <span className="temperature-data">
+                {temperature ? (
+                  temperature
+                ) : (
+                  <CircularProgress color="secondary" />
+                )}{" "}
+                C°
+              </span>
+            </div>
           </div>
           <div>
-            <span
-              style={{
-                color: "white",
-                fontSize: "30px",
-                color: "#FEF647",
-                fontWeight: "bold",
-              }}
-            >
-              {temperature ? (
-                temperature
-              ) : (
-                <CircularProgress color="secondary" />
-              )}{" "}
-              C°
-            </span>
+            <div className="resumen-temperatura_data">Térmica: </div>
+            <div>
+              <span className="temperature-data">
+                {aparentTemp ? (
+                  aparentTemp
+                ) : (
+                  <CircularProgress color="secondary" />
+                )}{" "}
+                C°
+              </span>
+            </div>
           </div>
-          <div style={{ marginTop: "10px" }}>
-            <span
-              style={{
-                fontSize: "18px",
-                color: "#ffffff",
-                textShadow: "1px 1px 2px #808080, -1px -1px 2px #808080}}",
-              }}
-            >
-              {timeData ? timeData : <CircularProgress color="info" />}
-            </span>
-          </div>
+        </div>
+      </div>
+      <div className="resumen-temperatura-max-min">
+        <div className="min-temp">
+          <span style={{ color: "white" }}>Min: </span>
+          <span style={{ color: "white" }}>
+            {minTemp ? minTemp : <CircularProgress color="inherit" />}°C
+          </span>
         </div>
         <div
-          className="resumen-temperatura-max-min"
-          
+          style={{
+            margin: "0,5px",
+            width: "1px",
+            height: "8vh",
+            backgroundColor: "#ffffff",
+          }}
+          className="divider-temp"
         >
-          <div className="min-temp" >
-            <span style={{ color: "white" }}>Min: </span>
-            <span style={{ color: "white" }}>
-              {minTemp ? minTemp : <CircularProgress color="inherit" />}°C
-            </span>
-          </div>
-          <div
-            style={{ margin: '0,5px', width: "1px", height: "8vh", backgroundColor: "#ffffff" }}
-            className="divider-temp"
-          >
-            {" "}
-          </div>
-          <div className="max-temp" >
-            <span style={{ color: "white" }}>Max: </span>
-            <span style={{ color: "white" }}>
-              {maxTemp ? maxTemp : <CircularProgress color="inherit" />} °C
-            </span>
-          </div>
+          {" "}
         </div>
+        <div className="max-temp">
+          <span style={{ color: "white" }}>Max: </span>
+          <span style={{ color: "white" }}>
+            {maxTemp ? maxTemp : <CircularProgress color="inherit" />} °C
+          </span>
+        </div>
+      </div>
+      <div className="daily-weather-box">
+        {dailyData ? (
+          dailyData.map((weatherInfo, index) => (
+            <div key={index} className="weekly-weather">
+              <div className="day-of-week">
+  {daysWeek && daysWeek.length > index && daysWeek[index] !== null
+    ? daysWeek[index]
+    : <CircularProgress color="secondary" />
+  }
+</div>
+              <div className="icon-style-weather">{weatherInfo.icon}</div>
+              <div className="resumen-temperatura_description">
+                {" "}
+                {weatherInfo.description}
+              </div>
+            </div>
+          ))
+        ) : (
+          <CircularProgress color="secondary" />
+        )}
       </div>
     </div>
   );
