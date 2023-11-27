@@ -105,7 +105,7 @@ const DayComplete = ({ data }) => {
     },
   };
 
-  console.log(hourlyData);
+
 
   const numberWidth = window.innerWidth;
 

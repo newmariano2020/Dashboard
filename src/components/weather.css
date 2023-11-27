@@ -71,6 +71,51 @@ margin-bottom: 10px;
     font-weight: bold;
     text-shadow: 1px 1px 2px #808080, -1px -1px 2px #808080;
 }
+/* Estilos generales del select */
+.weather-select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  appearance: none;
+  background-color: #fff;
+  width: 80%;
+  max-width: 300px; /* Ajusta según tus necesidades */
+  margin: 10px 0;
+  cursor: pointer;
+  margin-left: 10%;
+}
+
+/* Estilos para el fondo de la lista desplegable */
+.weather-select::-ms-expand {
+  display: none;
+}
+
+/* Estilos para las opciones en la lista */
+.weather-select option {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* Estilos cuando el select está enfocado */
+.weather-select:focus {
+  outline: none;
+  border-color: #007bff; /* Cambia al color que desees */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efecto de sombra */
+}
+
+/* Estilos al pasar el ratón sobre las opciones */
+.weather-select option:hover {
+  background-color: #dcdcdc; /* Cambia al color que desees */
+}
+
+/* Estilos para el borde cuando el select está desactivado */
+.weather-select:disabled {
+  border-color: #ccc;
+  background-color: #f2f2f2;
+  color: #666;
+}
+
 }
 @media screen and (min-width: 700px) {
     .weather-container {
@@ -143,4 +188,49 @@ margin-bottom: 10px;
         font-weight: bold;
         text-shadow: 1px 1px 2px #808080, -1px -1px 2px #808080;
     }
+
+/* Estilos generales del select */
+.weather-select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  appearance: none;
+  background-color: #fff;
+  width: 100%;
+  max-width: 300px; /* Ajusta según tus necesidades */
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+/* Estilos para el fondo de la lista desplegable */
+.weather-select::-ms-expand {
+  display: none;
+}
+
+/* Estilos para las opciones en la lista */
+.weather-select option {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* Estilos cuando el select está enfocado */
+.weather-select:focus {
+  outline: none;
+  border-color: #007bff; /* Cambia al color que desees */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Efecto de sombra */
+}
+
+/* Estilos al pasar el ratón sobre las opciones */
+.weather-select option:hover {
+  background-color: #dcdcdc; /* Cambia al color que desees */
+}
+
+/* Estilos para el borde cuando el select está desactivado */
+.weather-select:disabled {
+  border-color: #ccc;
+  background-color: #f2f2f2;
+  color: #666;
+}
+
 }
