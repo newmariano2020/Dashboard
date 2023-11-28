@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Dashboard/static/css/main.599cd72a.css",
-    "main.js": "/Dashboard/static/js/main.f5bd0515.js",
+    "main.js": "/Dashboard/static/js/main.fb9fc2e9.js",
     "static/js/787.545aecf5.chunk.js": "/Dashboard/static/js/787.545aecf5.chunk.js",
     "static/media/humidity.jpeg": "/Dashboard/static/media/humidity.0c5e4260b6c7df8a62f9.jpeg",
     "static/media/barometer.jpeg": "/Dashboard/static/media/barometer.ec29fb7ae1ab27953aba.jpeg",
@@ -14,11 +14,11 @@
     "static/media/weather-vane.jpeg": "/Dashboard/static/media/weather-vane.e4bcc1f3f8e6f60eff04.jpeg",
     "index.html": "/Dashboard/index.html",
     "main.599cd72a.css.map": "/Dashboard/static/css/main.599cd72a.css.map",
-    "main.f5bd0515.js.map": "/Dashboard/static/js/main.f5bd0515.js.map",
+    "main.fb9fc2e9.js.map": "/Dashboard/static/js/main.fb9fc2e9.js.map",
     "787.545aecf5.chunk.js.map": "/Dashboard/static/js/787.545aecf5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.599cd72a.css",
-    "static/js/main.f5bd0515.js"
+    "static/js/main.fb9fc2e9.js"
   ]
 }
