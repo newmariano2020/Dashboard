@@ -56,7 +56,7 @@ const Weather = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [selectedCity, setSelectedCity] = useState("Sao Paulo");
   const [timeData, setTimeData] = useState(null);
-  const [cityApiCall, setCityApiCall] = useState(cityesMisiones[9]);
+  const [cityApiCall, setCityApiCall] = useState(cityesMisiones[24]);
  
 
 
